@@ -1,12 +1,13 @@
-<p>home</p>
-<p>
-    <span ng-repeat="share in model.shares">
+<span ng-repeat="share in model.shares">
+    <p>hello</p>
         <a href="#"
+           ng-click="$close('close')"   
            socialshare
            socialshare-provider="{{share.provider}}"
-           socialshare-text="{{share.text}"
-           socialshare-url="{{share.url}}">{{share.label}}</a>
+           socialshare-text="{{share.text}}"
+           socialshare-url="{{share.url}}" 
+           title="{{share.tooltip}}">
+           <span class="icon {{share.icon}}">{{share.tooltip}}</span>
+        </a>
 
-    </span>
-
-</p>
+        </span>
